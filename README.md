@@ -10,8 +10,7 @@
 
 1. [News](#news)
 2. [Introduction](#intro)
-3. [Code Content](#contentlist)
-4. [Tutorials](#tutorials)
+3. [Tutorials](#tutorials)
 
 
 
@@ -43,16 +42,13 @@ If you find this repository useful, please consider giving us a star 🌟 and ci
 
 
 
-## Code Content <a name="contentlist"></a>
-
-- Training/Evaluation codes of pgp prediction networks implemented in Commonroad Env.
-- The proposed IR-STP planning method in a s-t serach framework.
-- Evaluation tools Commonroad Env., including solution caching as well as metric extraction.
-
-
-
 # Tutorials <a name="tutorials"></a>
 
-see documentation [./docs/tutorial.md](./docs/tutorial.md).
+Code includes
+1. Training/Evaluation codes of pgp prediction networks implemented in Commonroad Env.
+2. The proposed IR-STP planning method.
+3. Evaluation tools Commonroad Env., including solution caching as well as metric extraction.
+
+Tutorials see documentation [./docs/tutorial.md](./docs/tutorial.md).
 
 
