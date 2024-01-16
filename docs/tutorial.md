@@ -142,7 +142,7 @@ It will generate data for training prediction module, and the results will be st
 
 example pgp training data like:
 
-![11](./figs/demo_pgp.png)
+![11](../figs/demo_pgp.png)
 
 The following **yaml** file is used in configuring the vectorization & graph:
 
@@ -275,7 +275,7 @@ EXP_ROOT/${dataset}/exp_plan/videos/${tag_str}
 
 An example of video is:
 
-<img src="./figs/demo_gif.gif" style="zoom:40%;" />
+<img src="../figs/demo_gif.gif" style="zoom:40%;" />
 
 
 
