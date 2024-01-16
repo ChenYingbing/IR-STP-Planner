@@ -1,0 +1,13 @@
+
+configurations:
+  ## flags
+  ENABLE_CLOSEDLOOP_SIMULATION_SAVE_PDF: false
+
+  ## informations used in commonroad.
+  AUTHOR_NAME: "Abing"
+  AUTHOR_AFFILIATION: "The Hong Kong University of Science and Technology" 
+
+  ## note: fill "" empty string if not used
+  # EXP_ROOT: An arbitrary path to store experiment results
+  EXP_ROOT: "/your/path/to/exp/results"
+  COMMONROAD_DATA_ROOT: "/your/path/to/commonroad/commonroad-scenarios"

@@ -1,0 +1,4 @@
+<global>
+  <param key="sigma" value="0.0" />
+  <param key="jmSigmaMinor" value="0.0" />
+</global>

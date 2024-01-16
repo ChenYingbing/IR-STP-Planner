@@ -1,0 +1,74 @@
+{
+  "time_begin": 0,
+  "axis_visible": false,
+  "lanelet": {
+    "facecolor": "w",     
+    "show_label":false,
+    "unique_colors": false,
+    "draw_linewidth": 3, 
+    "draw_center_bound": true,
+    "draw_right_bound": false, 
+    "draw_left_bound": false,
+    "colormap_tangent": true
+  }, 
+  "dynamic_obstacle": {
+      "draw_signals": false,
+      "vehicle_shape": {
+          "occupancy": {
+              "shape": {
+                  "polygon": {
+                    "facecolor": "yellow"
+                  },
+                  "rectangle": {
+                    "facecolor": "yellow"
+                  },
+                  "circle": {
+                    "facecolor": "yellow"
+                  }
+              }
+          }
+      },
+      "history": {
+          "draw_history": true,
+          "steps": 5,
+          "step_size": 2,
+          "basecolor": "yellow",
+          "fade_factor": 0.1,
+          "occupancy": {
+            "shape": {
+                "polygon": {
+                    "opacity": 0.65,
+                    "edgecolor": "#000000",
+                    "linewidth": 0.0,
+                    "zorder": 17
+                },
+                "rectangle": {
+                    "opacity": 0.65,
+                    "edgecolor": "#000000",
+                    "linewidth": 0.0,
+                    "zorder": 17
+                },
+                "circle": {
+                    "opacity": 0.65,
+                    "edgecolor": "#000000",
+                    "linewidth": 0.0,
+                    "zorder": 17
+                }
+            }
+        }
+      }
+  },
+  "trajectory": {
+      "draw_trajectory": false
+  },
+  "phantom_obstacle": {
+      "draw_shape": false
+  },
+  "traffic_light": {
+    "draw_traffic_lights": false
+  },
+  "traffic_sign": {
+    "draw_traffic_signs": false, 
+    "show_label": false
+  }
+}

@@ -1,0 +1,14 @@
+reactions:
+  ## pamraters for extraction
+  # radius of agents in point model
+  agent_point_width: 0.2
+  # maximum duration when giveway_agent reach after overtake_agent pass the interaction point
+  future_cond_t: 2.5
+  # data is counted only when giveway agents has been observed more than react_past_dur_t 
+  past_dur_t: 0.5 
+
+  ## priority prediction input/output vector
+  # interval time value of the input trajectories
+  input_interval_t: 0.5
+  # maximum trajectory node amount
+  input_max_traj_node_num: 12

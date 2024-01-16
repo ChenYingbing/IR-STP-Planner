@@ -1,0 +1,10 @@
+
+commonroad: 
+  # Which mode to excute
+  #   1. extract: extract data from dataset ('data_path').
+  #   2. load: try load data from 'save_path'.
+  # @note data_path and save_path are defined in process_dataset.py
+  mode: 'load'
+  version: 'eval'
+  # Percentage of data being loaded in the eval
+  full_loaded: 1.0

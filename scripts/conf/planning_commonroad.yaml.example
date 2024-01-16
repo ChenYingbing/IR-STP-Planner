@@ -1,0 +1,40 @@
+plan_config:
+  # planner type in ['ca', 'ca+', 'izone_ca', 'izone_ca+', 'izone_rela']
+  planner_type: 'izone_rela'
+  # number of simulation steps
+  simu_steps: 80
+  # enable debug rviz or not
+  enable_debug_rviz: false # false
+  # from which frame step begins to start debug rviz
+  debug_rviz_step_from: 1000
+
+  # planning horizon time (seconds)
+  plan_horizon_T: 6.0
+
+  # mode for prediction module, valid values are ['default', 'lon-short']
+  prediction_mode: 'default'
+  # prediction horizon length (default is 12, 12*0.5=6.0s prediction horizon)
+  predict_horizon_L: 12
+  # prediction trajectory mode number (default is 10)
+  predict_traj_mode_num: 3
+
+  # solution tag string
+  solu_tag_str: 'test1'
+
+  # reaction configuration when planner_type == izone_rela
+  reaction_config:
+    algo_variable1: 1.0
+    algo_variable2: 3.0
+    algo_variable3: -15.0
+    reaction_conditions:
+      ignore_influ_cons: false # ignore constraints when relation is set influ
+      st_coefficents: 0         # default is 0, this controls the aggressiveness degree of planner
+      acc_mode: 'const'         # 'const': constant acc value;
+      acc_const_value: -0.01    # algo_variable0 in .sh
+      traj_mode: 'irule'        # 'cvm', 'pred', 'irule'
+
+  # list of scenario (indexes) being simulated, if want to include all, input empty list []
+  limit_number_of_scenarios: 500
+  involved_subsequent_scenarios: false
+  involved_scenarios: []
+  

@@ -1,0 +1,10 @@
+
+commonroad: 
+  # Which mode to excute
+  #   1. extract: extract data from dataset ('data_path').
+  #   2. load: try load data from 'save_path'.
+  # @note data_path and save_path are defined in process_dataset.py
+  mode: 'extract'
+
+  extract_dt: 2.0  # interval t to extract trajectory
+  extract_dur: 6.0 # during of trajectories extracted

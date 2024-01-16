@@ -1,0 +1,29 @@
+# commonroad-interactive-scenarios
+commonroad-io==2022.1
+libsumo
+sumocr==2022.1
+grpcio==1.27.2 # 1.27.2 is requried by sumocr
+ffmpeg
+
+# nuscenes-devkit
+nuscenes-devkit
+
+# interaction dataset
+pyproj
+
+# l5kit
+pyyaml
+zarr
+prettytable
+pymap3d
+transforms3d
+bokeh
+gym
+imageio
+
+# kmeans_torch
+numba
+
+# network relevants
+positional-encodings==5.0.0
+# ray==0.8.4 # will meet conflicts when (>=0.8.7) since it has a version requirement on grpcio

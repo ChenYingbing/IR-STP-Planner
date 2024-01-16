@@ -1,0 +1,8 @@
+eval_config:
+  # @note: solution_tag's order should from percentage low to high
+  eval_tags: [
+    'method_ca_0.1_p1', 
+    'method_ca_0.3_p1', 
+    'method_ca_0.6_p1', 
+    'method_ca_1.0_p1'
+  ]

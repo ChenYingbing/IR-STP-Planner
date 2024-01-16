@@ -1,0 +1,7 @@
+compare_config:
+  comparison_tags: [
+    'method_ca_0.1_p1', 
+    'method_ca_0.3_p1', 
+    'method_ca_0.6_p1', 
+    'method_ca_1.0_p1'
+  ]

@@ -1,0 +1,70 @@
+# Dataset and dataloader parameters
+dataset: 'commonroad'
+
+batch_size: 128
+num_workers: 4
+
+
+# Encoder parameters
+encoder_type: 'polyline_subgraphs'
+encoder_args:
+  agent_feat_size: 5
+  lane_feat_size: 5
+  num_layers: 2
+  mlp_size: 32
+
+# Aggregator parameters
+aggregator_type: 'global_attention'
+aggregator_args:
+  target_agent_enc_size: 64
+  emb_size: 128
+  num_heads: 32
+  context_enc_size: 64
+
+
+# Decoder parameters
+decoder_type: 'mtp'
+decoder_args:
+  op_len: 12
+  hidden_size: 128
+  encoding_size: 192
+  use_variance: False
+  num_modes: 10
+
+
+# Optimizer parameters
+optim_args:
+  lr: 0.0015
+  scheduler_step: 80
+  scheduler_gamma: 0.95
+
+
+losses: ['min_ade_k', 'miss_rate_k', 'mtp_loss']
+loss_weights: [1.0, 1.0, 0.5]
+loss_args:
+  - k: 10
+  - k: 10
+    dist_thresh: 2
+  - dummy: 0
+
+
+tr_metrics: ['min_ade_k', 'min_ade_k','miss_rate_k', 'mtp_loss']
+tr_metric_args:
+  - k: 5
+  - k: 10
+  - k: 10
+    dist_thresh: 2
+  - dummy: 0
+
+val_metrics: ['min_ade_k','min_ade_k', 'miss_rate_k', 'miss_rate_k', 'mtp_loss']
+val_metric_args:
+  - k: 5
+  - k: 10
+  - k: 5
+    dist_thresh: 2
+  - k: 10
+    dist_thresh: 2
+  - dummy: 0
+
+
+log_freq: 100

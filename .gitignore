@@ -1,0 +1,16 @@
+# caches
+__pycache__/
+.vscode/
+
+# yaml configs
+scripts/conf/*.yaml
+
+# experiment files
+*.html
+*/*.bin
+
+# third parties
+commonroad_io/
+commonroad-interactive-scenarios/
+kmeans_pytorch/
+tutorials-3rdparties/

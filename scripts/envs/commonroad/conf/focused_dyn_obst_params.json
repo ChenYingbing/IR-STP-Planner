@@ -1,0 +1,50 @@
+{
+  "time_begin": 0,
+  "dynamic_obstacle": {
+      "draw_signals": false,
+      "vehicle_shape": {
+          "occupancy": {
+              "shape": {
+                  "polygon": {
+                    "facecolor": "red"
+                  },
+                  "rectangle": {
+                    "facecolor": "red"
+                  },
+                  "circle": {
+                    "facecolor": "red"
+                  }
+              }
+          }
+      },
+      "history": {
+        "draw_history": true,
+        "steps": 5,
+        "step_size": 2,
+        "basecolor": "red",
+        "fade_factor": 0.1,
+        "occupancy": {
+          "shape": {
+              "polygon": {
+                  "opacity": 0.65,
+                  "edgecolor": "#000000",
+                  "linewidth": 0.0,
+                  "zorder": 17
+              },
+              "rectangle": {
+                  "opacity": 0.65,
+                  "edgecolor": "#000000",
+                  "linewidth": 0.0,
+                  "zorder": 17
+              },
+              "circle": {
+                  "opacity": 0.65,
+                  "edgecolor": "#000000",
+                  "linewidth": 0.0,
+                  "zorder": 17
+              }
+          }
+      }
+    }
+  }
+}

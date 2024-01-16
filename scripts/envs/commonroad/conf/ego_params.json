@@ -1,0 +1,27 @@
+{
+  "time_begin": 0,
+  "dynamic_obstacle": {
+      "draw_signals": false,
+      "vehicle_shape": {
+          "occupancy": {
+              "shape": {
+                  "polygon": {
+                    "facecolor": "red"
+                  },
+                  "rectangle": {
+                    "facecolor": "red"
+                  },
+                  "circle": {
+                    "facecolor": "red"
+                  }
+              }
+          }
+      },
+      "trajectory": {
+        "draw_trajectory": false
+      },
+      "history": {
+        "draw_history": false
+      }
+  }
+}
