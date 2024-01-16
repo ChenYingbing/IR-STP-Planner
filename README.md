@@ -8,11 +8,65 @@
 
 ## Content List:
 
-1. [News](#news)
-2. [Introduction](#intro)
-3. [Tutorials](#tutorials)
+1. [Introduction](#intro)
+2. [Exprimental results](#exp_result) 
+3. [News](#news)
+4. [Getting Started](#tutorials)
 
 
+
+## Introduction <a name="intro"></a>
+
+Our approach integrates **interaction modeling** into s-t planning by recording and updating interaction relationships for every planned state throughout the planning process. More specifically, the interaction relationships are modified through forward search, guided by the interaction formulations we put forth. These formulations clarify appropriate interaction dynamics, encompassing reactions (e.g., overtaking and yielding), and delineate strategies to influence the trajectories of other agents, providing guidance on the timing and execution of these actions.
+
+**Simulation Verification**: The proposed planning method is validated under prediction results from pgp-network [1] in Commonroad [2] closed-loop simulation. 
+
+**BibTex**: If you find this repository useful, please consider giving us a star 🌟 and citing it by
+
+```bibtex
+@article{chen2023ir,
+  title={IR-STP: Enhancing Autonomous Driving with Interaction Reasoning in Spatio-Temporal Planning},
+  author={Chen, Yingbing and Cheng, Jie and Gan, Lu and Wang, Sheng and Liu, Hongji and Mei, Xiaodong and Liu, Ming},
+  journal={arXiv preprint arXiv:2311.02850},
+  year={2023}
+}
+```
+
+## Experimental Results <a name="exp_result"></a>
+
+Below show part of experimental results, for more details, pls see <a href="https://arxiv.org/abs/2311.02850">arxiv</a>. 
+
+### Qualitative Results
+
+
+<p float="left">
+  <img src="./figs/646_demon_fps10.gif" height="350" width="350" /> <img src="./figs/711_demon_fps10.gif" height="350" width="350" />
+  <img src="./figs/736_demon_fps10.gif" height="350" width="350" /> <img src="./figs/757_demon_fps10.gif" height="350" width="350" />
+</p>
+
+Red box: ego vehicle;
+
+Yellow line (left): the reference route;
+
+Blue points (left): the planned trajectory;
+
+dotted lines (right): multi-modal prediction results;
+
+### Quantitative Results
+
+- Calculation Times (in Python)
+ 
+  <img src="./figs/cal_times.jpg" height="200" width="300" /> 
+
+- Compared with Benchmarks
+
+  <img src="./figs/exp1.jpg" height="400" width="800" /> 
+
+  ***
+  <img src="./figs/exp2.jpg" height="250" width="600" /> 
+
+  ***
+  <img src="./figs/exp3.jpg" height="400" width="700" /> 
 
 ## News <a name="news"></a>
 
@@ -25,24 +79,7 @@ The code and tutorial have been released, any questions or inquiries are welcome
 
 
 
-## Introduction <a name="intro"></a>
-
-The introduction is coming soon.
-
-If you find this repository useful, please consider giving us a star 🌟 and citing it by the following BibTeX entry.
-
-```bibtex
-@article{chen2023ir,
-  title={IR-STP: Enhancing Autonomous Driving with Interaction Reasoning in Spatio-Temporal Planning},
-  author={Chen, Yingbing and Cheng, Jie and Gan, Lu and Wang, Sheng and Liu, Hongji and Mei, Xiaodong and Liu, Ming},
-  journal={arXiv preprint arXiv:2311.02850},
-  year={2023}
-}
-```
-
-
-
-# Tutorials <a name="tutorials"></a>
+## Getting Started <a name="tutorials"></a>
 
 Code includes
 1. Training/Evaluation codes of pgp prediction networks implemented in Commonroad Env.
@@ -50,5 +87,16 @@ Code includes
 3. Evaluation tools Commonroad Env., including solution caching as well as metric extraction.
 
 Tutorials see documentation [./docs/tutorial.md](./docs/tutorial.md).
+
+
+**References:**
+
+[1] Deo N, Wolff E, Beijbom O. Multimodal trajectory prediction conditioned on lane-graph traversals[C]//Conference on Robot Learning. PMLR, 2022: 203-212.
+
+[2] Althoff M, Koschi M, Manzinger S. CommonRoad: Composable benchmarks for motion planning on roads[C]//2017 IEEE Intelligent Vehicles Symposium (IV). IEEE, 2017: 719-726.
+
+[6] Cui A, Casas S, Sadat A, et al. Lookout: Diverse multi-future prediction and planning for self-driving[C]//Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021: 16107-16116.
+
+[21] Pan Y, Lin Q, Shah H, et al. Safe planning for self-driving via adaptive constrained ILQR[C]//2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS). IEEE, 2020: 2377-2383.
 
 
