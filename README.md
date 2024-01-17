@@ -95,8 +95,8 @@ Tutorials see documentation [./docs/tutorial.md](./docs/tutorial.md).
 
 [2] Althoff M, Koschi M, Manzinger S. CommonRoad: Composable benchmarks for motion planning on roads[C]//2017 IEEE Intelligent Vehicles Symposium (IV). IEEE, 2017: 719-726.
 
-[6] Cui A, Casas S, Sadat A, et al. Lookout: Diverse multi-future prediction and planning for self-driving[C]//Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021: 16107-16116.
+[7] Cui A, Casas S, Sadat A, et al. Lookout: Diverse multi-future prediction and planning for self-driving[C]//Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021: 16107-16116.
 
-[21] Pan Y, Lin Q, Shah H, et al. Safe planning for self-driving via adaptive constrained ILQR[C]//2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS). IEEE, 2020: 2377-2383.
+[8] Pan Y, Lin Q, Shah H, et al. Safe planning for self-driving via adaptive constrained ILQR[C]//2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS). IEEE, 2020: 2377-2383.
 
 
