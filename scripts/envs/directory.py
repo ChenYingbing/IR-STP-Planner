@@ -12,8 +12,8 @@ class ProcessedDatasetDirectory:
     :param process_mode: a arbitary string to identify the mode 
     '''
     CACHE_PATH = {
-      'interaction_dataset':\
-        get_root2folder(envs.config.INTERACTION_EXP_ROOT, process_mode),
+      # 'interaction_dataset':\
+      #   get_root2folder(envs.config.INTERACTION_EXP_ROOT, process_mode),
       'commonroad':\
         get_root2folder(envs.config.COMMONROAD_EXP_ROOT, process_mode),
     }

@@ -124,7 +124,7 @@ class TrainAndEvaluator:
             self.scheduler.step()
 
             # Update validation metric
-            self.val_metric = val_epoch_metrics[self.val_metrics[0].name] / val_epoch_metrics['minibatch_count']
+            self.val_metric = val_epoch_metrics[self.val_metrics[0].name] / max(1, val_epoch_metrics['minibatch_count'])
 
             # save best checkpoint when applicable
             if self.val_metric < self.min_val_metric:
@@ -250,8 +250,8 @@ class TrainAndEvaluator:
         """
         metrics = self.train_metrics if mode == 'train' else self.val_metrics
         minibatches_left = len(dl) - epoch_metrics['minibatch_count']
-        eta = (epoch_metrics['time_elapsed']/epoch_metrics['minibatch_count']) * minibatches_left
-        epoch_progress = int(epoch_metrics['minibatch_count']/len(dl) * 100)
+        eta = (epoch_metrics['time_elapsed']/max(1, epoch_metrics['minibatch_count'])) * minibatches_left
+        epoch_progress = int(epoch_metrics['minibatch_count']/max(1, len(dl)) * 100)
         print('\rTraining:' if mode == 'train' else '\rValidating:', end=" ")
         progress_bar = '['
         for i in range(20):
@@ -264,7 +264,7 @@ class TrainAndEvaluator:
         print('ETA:', int(eta), end="s, ")
         print('Metrics', end=": { ")
         for metric in metrics:
-            metric_val = epoch_metrics[metric.name]/epoch_metrics['minibatch_count']
+            metric_val = epoch_metrics[metric.name]/max(1, epoch_metrics['minibatch_count'])
             print(metric.name + ':', format(metric_val, '0.2f'), end=", ")
         print('\b\b }', end="\n" if eta == 0 else "")
 
@@ -310,5 +310,5 @@ class TrainAndEvaluator:
         if self.writer:
             for metric_name, metric_val in epoch_metrics.items():
                 if metric_name != 'minibatch_count' and metric_name != 'time_elapsed':
-                    metric_val /= epoch_metrics['minibatch_count']
+                    metric_val /= max(1, epoch_metrics['minibatch_count'])
                     self.writer.add_scalar('val/' + metric_name, metric_val, self.tb_iters)

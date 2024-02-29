@@ -1,0 +1,35 @@
+
+commonroad: 
+  # Which mode to excute
+  #   1. extract: extract data from 'data_path' & save to 'save_path'
+  #        : preprocess step before trainning
+  #   2. load: try load data from 'save_path'
+  #        : usually used in trainning
+  # @note 'data_path' and 'save_path' are defined in scripts/process_dataset.py
+  mode: 'extract'
+
+  process_mode: 'graph' # which format of data, 'rasterize', 'graph', 'vectorize'
+  train_val_split: 0.9      # how much percentage data is 'train' set, [only when mode == 'extract']
+  t_history: 2.0            # history time duration: seconds
+  t_future: 6.0             # future prediction duration: seconds
+  extract_t_interval: 1.0   # active only when mode == 'extract', time interval to extract prediction data
+  enable_rviz: true         # if true, will store rviz pictures in 'save_path'
+
+  rasterize:  # this function is realized in old code
+    todo: 0.0 
+
+  vectorize: # vectorization representation
+    t_interval: 0.5                 # time interval (seconds) to capture the motion of agents
+    feature_size: 5                 # dimension of feature vector
+
+    map_extent: [-20, 80, -50, 50]  # meters, map extent [back_x, front_x, right_y, left_y]
+    polyline_resolution: 1.0        # meters, to capture
+    polyline_length: 4              # numbers(int), how much of lane node will be packed into one lane node segment
+
+    num_lane_nodes: 500             # lane node maximum number: adjust according to 'polyline_length'
+    num_vehicles: 40
+    num_pedestrians: 40
+
+  graph:
+    max_nbr_nodes: 20
+    lane_node_route_horizon: 15
