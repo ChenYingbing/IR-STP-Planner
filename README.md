@@ -24,11 +24,12 @@ Our approach integrates **interaction modeling** into s-t planning by recording 
 **BibTex**: If you find this repository useful, please consider giving us a star 🌟 and citing it by
 
 ```bibtex
-@article{chen2023ir,
-  title={IR-STP: Enhancing Autonomous Driving with Interaction Reasoning in Spatio-Temporal Planning},
+@article{chen2024ir,
+  title={IR-STP: Enhancing Autonomous Driving With Interaction Reasoning in Spatio-Temporal Planning},
   author={Chen, Yingbing and Cheng, Jie and Gan, Lu and Wang, Sheng and Liu, Hongji and Mei, Xiaodong and Liu, Ming},
-  journal={arXiv preprint arXiv:2311.02850},
-  year={2023}
+  journal={IEEE Transactions on Intelligent Transportation Systems},
+  year={2024},
+  publisher={IEEE}
 }
 ```
 
